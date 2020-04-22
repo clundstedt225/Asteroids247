@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/Enterprise.png</File>
+    <File>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/MFalcon.png</File>
+    <File>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/MyFont.spritefont</File>
+    <File>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/Tie.png</File>
+    <File>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/TieAdvanced.png</File>
+    <File>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/TriShip.png</File>
+    <File>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/WhiteTriShip.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
