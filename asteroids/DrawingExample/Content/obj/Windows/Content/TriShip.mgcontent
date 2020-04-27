@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/TriShip.png</SourceFile>
+  <SourceFile>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/TriShip.png</SourceFile>
   <SourceTime>2020-04-19T18:35:05.1970241-04:00</SourceTime>
-  <DestFile>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/bin/Windows/Content/TriShip.xnb</DestFile>
-  <DestTime>2020-04-20T02:01:49.1219898-04:00</DestTime>
+  <DestFile>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/bin/Windows/Content/TriShip.xnb</DestFile>
+  <DestTime>2020-04-22T16:10:48.7035794-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

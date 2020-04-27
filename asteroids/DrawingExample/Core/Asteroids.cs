@@ -34,8 +34,7 @@ namespace AsteroidTools
             //On Destroyed
             // - Award Point value
             // - Explode
-            // - Spawn 2 smaller level asteroids (if not already small)
-           
+            // - Spawn 2 smaller level asteroids (if not already small)         
         }
     }
 }

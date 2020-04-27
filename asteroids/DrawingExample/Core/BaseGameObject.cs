@@ -23,7 +23,10 @@ namespace DrawingExample
         public Vector2 Velocity;
         public bool HasMaxiumVelocity = false;
         public float MaxiumVelocity = float.MaxValue;
-   
+
+        //Screen Wrapping Buffer
+        int sBuffer = 25;
+
         public BaseGameObject()
         {
             GameApp.instance.SceneList.Add(this);
@@ -77,9 +80,27 @@ namespace DrawingExample
                 objectSprite.position = Position;
                 objectSprite.rotation = Rotation;
                 objectSprite.scale = Scale;
-            }
 
-            //Wrapped play field logic (all game objects should behave this way)
+
+                //Wrapped play field logic
+                //Handle the X axis checks
+                if (Position.X > (800 + sBuffer))
+                {
+                    Position.X = 0 + -sBuffer;
+                } else if (Position.X < (0 - sBuffer))
+                {
+                    Position.X = 800 + sBuffer;
+                }
+
+                //Handle the Y axis checks
+                if (Position.Y > (600 + sBuffer))
+                {
+                    Position.Y = 0 + -sBuffer;
+                } else if (Position.Y < (0 - sBuffer))
+                {
+                    Position.Y = 600 + sBuffer;
+                }
+            }
         }
 
         public void ObjectDraw(SpriteBatch spriteBatch)

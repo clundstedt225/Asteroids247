@@ -137,3 +137,33 @@ C:\Users\Connor\Desktop\NHTI Home Desktop\247 Math Programming\asteroids\Drawing
 C:\Users\Connor\Desktop\NHTI Home Desktop\247 Math Programming\asteroids\DrawingExample\obj\x86\Debug\DrawingExample.pdb
 C:\Users\Connor\Desktop\NHTI Home Desktop\247 Math Programming\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\TriShip.xnb
 C:\Users\Connor\Desktop\NHTI Home Desktop\247 Math Programming\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\WhiteTriShip.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\Enterprise.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\MFalcon.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\MyFont.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\Tie.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\TieAdvanced.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\TriShip.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\WhiteTriShip.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\DrawingExample.exe
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\DrawingExample.pdb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\MonoGame.Framework.dll
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.dll
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.XInput.dll
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\MonoGame.Framework.xml
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.xml
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\SharpDX.XInput.xml
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\obj\x86\Debug\DrawingExample.csprojAssemblyReference.cache
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\obj\x86\Debug\DrawingExample.csproj.CoreCompileInputs.cache
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\obj\x86\Debug\DrawingExample.csproj.CopyComplete
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\obj\x86\Debug\DrawingExample.exe
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\obj\x86\Debug\DrawingExample.pdb

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/MyFont.spritefont</SourceFile>
+  <SourceFile>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/MyFont.spritefont</SourceFile>
   <SourceTime>2020-04-20T20:45:19.0556487-04:00</SourceTime>
-  <DestFile>C:/Users/Connor/Desktop/NHTI Home Desktop/247 Math Programming/asteroids/DrawingExample/Content/bin/Windows/Content/MyFont.xnb</DestFile>
-  <DestTime>2020-04-20T20:45:23.7340899-04:00</DestTime>
+  <DestFile>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/bin/Windows/Content/MyFont.xnb</DestFile>
+  <DestTime>2020-04-22T16:10:48.6215609-04:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

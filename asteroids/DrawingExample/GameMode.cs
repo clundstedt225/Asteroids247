@@ -40,6 +40,8 @@ namespace DrawingExample
             graphics.IsFullScreen = false;
             graphics.ApplyChanges();
 
+            Window.Title = "C# Asteroids";
+
             IsMouseVisible = true;    
         }
 
@@ -124,11 +126,11 @@ namespace DrawingExample
                {
                    if (playerShip.Velocity.X > 0)
                    {
-                       playerShip.Velocity.X -= 1;
+                       playerShip.Velocity.X -= 1.5f;
                    }
                    else
                    {
-                       playerShip.Velocity.X += 1;
+                       playerShip.Velocity.X += 1.5f;
                    }
                }
 
@@ -136,11 +138,11 @@ namespace DrawingExample
                {
                    if (playerShip.Velocity.Y > 0)
                    {
-                       playerShip.Velocity.Y -= 1;
+                       playerShip.Velocity.Y -= 1.5f;
                    }
                    else
                    {
-                       playerShip.Velocity.Y += 1;
+                       playerShip.Velocity.Y += 1.5f;
                    }
                }              
             }
