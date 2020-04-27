@@ -38,3 +38,17 @@ namespace AsteroidTools
         }
     }
 }
+
+/*
+
+//Go through each object in scene for circle collision check
+foreach(BaseGameObject go in GameApp.instance.SceneList) {
+	//Compare if distance to other given object is less then the combined radius of objects
+	if (Vector2.Distance(this.Position, go.Position) <= (this.Radius + go.Radius)){
+		//Has collided with current go in list...
+		
+}
+
+//asteroid -> torpedo (both destroyed, asteroid brought down a level)
+//asteroid -> ship (ship dissapears, life lost, if no lives don't respawn)
+*/

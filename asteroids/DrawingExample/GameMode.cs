@@ -20,7 +20,7 @@ namespace DrawingExample
         BaseGameObject playerShip;
 
         //Player info
-        int playerScore = 0000;
+        int playerScore = 0;
         int playerLives = 4;
         List<BaseGameObject> playerLifeIcons;
 
@@ -82,6 +82,10 @@ namespace DrawingExample
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void GameUpdate(GameTime gameTime)
         {
+            //Get forward direction of ship
+            float rotAngle = MathHelper.ToRadians(-90);
+            Vector2 direction = new Vector2((float)Math.Cos(playerShip.Rotation + rotAngle), (float)Math.Sin(playerShip.Rotation + rotAngle));
+            direction.Normalize();
 
             offset += gameTime.ElapsedGameTime.Milliseconds;
 
@@ -96,26 +100,31 @@ namespace DrawingExample
                 //theGrid.GridSize += (Math.Abs(deltaScrollWheel) / deltaScrollWheel) * 2; 
             }
 
-            //mouseCurrent.MiddleButton
-            if (IsKeyHeld(Keys.A))
+            //Shoot torpedo
+            if (IsKeyPressed(Keys.Space))
             {
-                playerShip.Rotation -= 5 * (MathHelper.Pi / 180); ;
+                //Create circle game object
+                BaseGameObject torpedo = new BaseGameObject();
+                torpedo.objectCircle = new Circle();
+                torpedo.useTimer = true;
+                torpedo.Position = playerShip.Position;
+                
+                torpedo.Velocity = direction * 700;
             }
 
-            //mouseCurrent.MiddleButton
+            if (IsKeyHeld(Keys.A))
+            {
+                playerShip.Rotation -= 5 * (MathHelper.Pi / 180); 
+            }
+
             if (IsKeyHeld(Keys.D))
             {
-                playerShip.Rotation += 5 * (MathHelper.Pi / 180); ;
+                playerShip.Rotation += 5 * (MathHelper.Pi / 180); 
             }
 
             //Activate ships thruster
             if (IsKeyHeld(Keys.W))
             {
-                //Get forward direction of ship
-                float rotAngle = MathHelper.ToRadians(-90);
-                Vector2 direction = new Vector2((float)Math.Cos(playerShip.Rotation + rotAngle), (float)Math.Sin(playerShip.Rotation + rotAngle));
-                direction.Normalize();
-
                 //Increase velocity in forward direction of ship
                 playerShip.Velocity += direction * 5;
             }
