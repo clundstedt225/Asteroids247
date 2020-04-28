@@ -124,6 +124,14 @@ namespace DrawingExample
                     //Call each objects inner update method
                     go.ObjectUpdate(gameTime);
                 }
+
+                /*
+                for(int i = 0; i < SceneList.Count; i++)
+                {
+                    //Call each objects inner update method
+                    SceneList[i].ObjectUpdate(gameTime);
+                }
+                */
             }
 
             // Clean up objects that are for Destruction

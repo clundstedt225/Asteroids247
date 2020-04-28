@@ -32,13 +32,13 @@ namespace AsteroidTools
 
         public override void OnDestroy()
         {
-            //base.OnDestroy();
             isActive = false;
 
-            // - Award Point value
+            //Award Point value
             GameMode.playerScore += pointValue;
 
-            // - Play explosion sound
+            //Play explosion sound
+            GameMode.explosionAsteroidSound.Play();
 
             // - Spawn 2 smaller level asteroids (if not already small)         
         }
@@ -55,15 +55,17 @@ namespace AsteroidTools
 
         public override void OnDestroy()
         {
-            //base.OnDestroy();
+            isActive = false;
 
             //Play death sound 
+            GameMode.explosionShipSound.Play();
 
             //Respawn if lives are available
             if (playerLives > 0)
             {
                 playerLives--;
                 GameMode.playerLifeIcons.RemoveAt(playerLives);
+                //GameMode.SpawnPlayer();
             }
         }
     }

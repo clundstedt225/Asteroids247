@@ -167,3 +167,6 @@ E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\obj\x86\Debug\Drawin
 E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\obj\x86\Debug\DrawingExample.csproj.CopyComplete
 E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\obj\x86\Debug\DrawingExample.exe
 E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\obj\x86\Debug\DrawingExample.pdb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\asteroidDestroyed.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\asteroidFire.xnb
+E:\REPOS\247FinalProj\Asteroids247\asteroids\DrawingExample\bin\Windows\x86\Debug\Content\shipDeath.xnb

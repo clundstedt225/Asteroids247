@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/asteroidDestroyed.wav</SourceFile>
+  <SourceTime>2020-04-27T18:23:22.8161378-04:00</SourceTime>
+  <DestFile>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/bin/Windows/Content/asteroidDestroyed.xnb</DestFile>
+  <DestTime>2020-04-28T02:02:11.2241617-04:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2018-12-08T11:35:54-05:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

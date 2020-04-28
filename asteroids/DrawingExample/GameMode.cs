@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
 using AsteroidTools;
 using LineDraw; 
 
@@ -13,11 +14,12 @@ namespace DrawingExample
 {
     class GameMode : GameApp
     {
-        public static int screenWidth = 800;
-        public static int screenHeight = 600;
+        public static int screenWidth = 960;
+        public static int screenHeight = 720;
 
         //Font for score info
         SpriteFont gameFont;
+        public static SoundEffect shootSound, explosionAsteroidSound, explosionShipSound;
         public static PlayerShip playerShip;
         Asteroid testRoid;
 
@@ -55,11 +57,15 @@ namespace DrawingExample
             // TODO: use this.Content to load your game content here
             gameFont = Content.Load<SpriteFont>("MyFont");
 
+            shootSound = Content.Load<SoundEffect>("asteroidFire");
+            explosionShipSound = Content.Load<SoundEffect>("shipDeath");
+            explosionAsteroidSound = Content.Load<SoundEffect>("asteroidDestroyed");
+
             //Player object initial set up
-            playerShip = new PlayerShip("WhiteTriShip");
+                        playerShip = new PlayerShip("WhiteTriShip");
             playerShip.objectSprite.origin.X = playerShip.objectSprite.texture.Width / 2;
             playerShip.objectSprite.origin.Y = playerShip.objectSprite.texture.Height / 2;
-            playerShip.Scale = 0.07f;
+            playerShip.Scale = 0.06f;
             playerShip.Position = new Vector2((screenWidth / 2), (screenHeight / 2));
 
             testRoid = new Asteroid();
@@ -105,11 +111,14 @@ namespace DrawingExample
                 //Create circle game object
                 BaseGameObject torpedo = new BaseGameObject();
                 torpedo.objectCircle = new Circle();
+                torpedo.circleRadius = 3.5f;
                 torpedo.destroyOnCollide = true;
                 torpedo.useTimer = true;
                 torpedo.Position = playerShip.Position;
                 
                 torpedo.Velocity = direction * 950;
+
+                shootSound.Play();
             }
 
             if (IsKeyHeld(Keys.A))
@@ -201,22 +210,19 @@ namespace DrawingExample
                 playerLifeIcons[i].origin.Y = playerShip.objectSprite.texture.Height / 2;
                 playerLifeIcons[i].scale = 0.05f;
 
-                if (i == 0)
-                {
+                if (i == 0) {
                     //Where the row of lives icons should start from
                     playerLifeIcons[i].position = new Vector2(35, 55);
-                }
-                else
-                {
+                } else {
                     //Offset new sprite relative to previous index in list for X value only
                     playerLifeIcons[i].position = new Vector2((playerLifeIcons[i - 1].position.X + 25), 55);
                 }
             }
         }
 
-        public void SpawnPlayer()
+        public static void SpawnPlayer()
         {
-
+            
         }
     }
 }

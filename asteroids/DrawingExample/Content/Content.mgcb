@@ -13,6 +13,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin asteroidDestroyed.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:asteroidDestroyed.wav
+
+#begin asteroidFire.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:asteroidFire.wav
+
 #begin Enterprise.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -43,6 +55,12 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:MyFont.spritefont
+
+#begin shipDeath.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:shipDeath.wav
 
 #begin Tie.png
 /importer:TextureImporter
