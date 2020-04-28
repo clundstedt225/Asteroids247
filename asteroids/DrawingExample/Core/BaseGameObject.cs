@@ -25,6 +25,9 @@ namespace DrawingExample
         public int circleSides = 12;
 
         public bool isActive = true;
+        public bool collisionChecks = false;
+        public bool destroyOnCollide = false;
+
         public Vector2 Position = Vector2.Zero;
         public float Scale = 0.5f;
         public float Rotation = 0;
@@ -106,6 +109,12 @@ namespace DrawingExample
                 }
             }
 
+            //Should this game object check for collisions?
+            if (collisionChecks)
+            {
+                CollisionCheck();
+            }
+
             //Wrapped play field logic
             //Handle the X axis checks
             if (Position.X > (800 + sBuffer))
@@ -160,6 +169,35 @@ namespace DrawingExample
         public virtual void OnDestroy()
         {
             isActive = false;
+        }
+
+        public void CollisionCheck()
+        {
+            //Go through each object in scene for circle collision check
+            foreach (BaseGameObject go in GameApp.instance.SceneList)
+            {
+                //Compare if distance to other given object is less then the combined radius of objects
+                if (Vector2.Distance(this.Position, go.Position) <= (this.circleRadius + go.circleRadius))
+                {
+                    //Has collided with current go in list...
+
+                    //Destroy both objects
+                    if (this.destroyOnCollide && go.destroyOnCollide)
+                    {
+                        //Destroy other object first
+                        go.Destroy();
+                        this.Destroy();
+
+                    } else if (go.destroyOnCollide && !this.destroyOnCollide) 
+                    {
+                        //Destroy only other object
+                        go.Destroy();
+                    }
+                }
+            }
+
+            //PlayerShip -> destroy on collision with asteroid
+            //Torpedo -> destroy asteroid AND self
         }
     }
 
