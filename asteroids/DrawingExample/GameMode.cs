@@ -13,16 +13,17 @@ namespace DrawingExample
 {
     class GameMode : GameApp
     {
-        float offset = 0;
-        
+        public static int screenWidth = 800;
+        public static int screenHeight = 600;
+
         //Font for score info
         SpriteFont gameFont;
-        BaseGameObject playerShip;
+        public static PlayerShip playerShip;
+        Asteroid testRoid;
 
         //Player info
-        int playerScore = 0;
-        int playerLives = 4;
-        List<BaseGameObject> playerLifeIcons;
+        public static int playerScore = 0;
+        public static List<Sprite> playerLifeIcons;
 
         /// <summary>
         /// Public contstructor... Does need to do anything at all. Those are the best constructors. 
@@ -35,8 +36,8 @@ namespace DrawingExample
 
             // Setting up Screen Resolution
             // Read more here: http://rbwhitaker.wikidot.com/changing-the-window-size
-            graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = screenWidth;
+            graphics.PreferredBackBufferHeight = screenHeight;
             graphics.IsFullScreen = false;
             graphics.ApplyChanges();
 
@@ -55,11 +56,17 @@ namespace DrawingExample
             gameFont = Content.Load<SpriteFont>("MyFont");
 
             //Player object initial set up
-            playerShip = new BaseGameObject("WhiteTriShip");
+            playerShip = new PlayerShip("WhiteTriShip");
             playerShip.objectSprite.origin.X = playerShip.objectSprite.texture.Width / 2;
             playerShip.objectSprite.origin.Y = playerShip.objectSprite.texture.Height / 2;
             playerShip.Scale = 0.07f;
-            playerShip.Position = new Vector2((graphics.PreferredBackBufferWidth / 2), (graphics.PreferredBackBufferHeight / 2));
+            playerShip.Position = new Vector2((screenWidth / 2), (screenHeight / 2));
+
+            testRoid = new Asteroid();
+            testRoid.objectCircle = new Circle();
+            testRoid.Position = Vector2.Zero;
+            testRoid.circleRadius = 50f;
+            testRoid.circleSides = 24;
 
             //Populate upper left with player lives
             SetUpPlayerLives();
@@ -87,17 +94,9 @@ namespace DrawingExample
             Vector2 direction = new Vector2((float)Math.Cos(playerShip.Rotation + rotAngle), (float)Math.Sin(playerShip.Rotation + rotAngle));
             direction.Normalize();
 
-            offset += gameTime.ElapsedGameTime.Milliseconds;
-
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
                 Exit();
-            }
-
-            int deltaScrollWheel = mousePrevious.ScrollWheelValue - mouseCurrent.ScrollWheelValue; 
-            if (deltaScrollWheel != 0)
-            {
-                //theGrid.GridSize += (Math.Abs(deltaScrollWheel) / deltaScrollWheel) * 2; 
             }
 
             //Shoot torpedo
@@ -106,10 +105,11 @@ namespace DrawingExample
                 //Create circle game object
                 BaseGameObject torpedo = new BaseGameObject();
                 torpedo.objectCircle = new Circle();
+                torpedo.destroyOnCollide = true;
                 torpedo.useTimer = true;
                 torpedo.Position = playerShip.Position;
                 
-                torpedo.Velocity = direction * 700;
+                torpedo.Velocity = direction * 950;
             }
 
             if (IsKeyHeld(Keys.A))
@@ -167,6 +167,11 @@ namespace DrawingExample
 
             spriteBatch.Begin();
 
+            foreach (Sprite icon in playerLifeIcons)
+            {
+                icon.Draw(spriteBatch);
+            }
+
             // Draw items in our Scene List
             foreach (BaseGameObject go in SceneList)
             {
@@ -183,30 +188,35 @@ namespace DrawingExample
             base.Draw(gameTime);
         }
 
-        void SetUpPlayerLives()
+        public static void SetUpPlayerLives()
         {
             //Init list of game objects
-            playerLifeIcons = new List<BaseGameObject>();
+            playerLifeIcons = new List<Sprite>();
 
             //Set up row of extra life icons in upper left of screen
-            for (int i = 0; i < playerLives; i++)
+            for (int i = 0; i < playerShip.playerLives; i++)
             {
-                playerLifeIcons.Add(new BaseGameObject("WhiteTriShip"));
-                playerLifeIcons[i].objectSprite.origin.X = playerShip.objectSprite.texture.Width / 2;
-                playerLifeIcons[i].objectSprite.origin.Y = playerShip.objectSprite.texture.Height / 2;
-                playerLifeIcons[i].Scale = 0.05f;
+                playerLifeIcons.Add(new Sprite("WhiteTriShip"));
+                playerLifeIcons[i].origin.X = playerShip.objectSprite.texture.Width / 2;
+                playerLifeIcons[i].origin.Y = playerShip.objectSprite.texture.Height / 2;
+                playerLifeIcons[i].scale = 0.05f;
 
                 if (i == 0)
                 {
                     //Where the row of lives icons should start from
-                    playerLifeIcons[i].Position = new Vector2(35, 55);
+                    playerLifeIcons[i].position = new Vector2(35, 55);
                 }
                 else
                 {
                     //Offset new sprite relative to previous index in list for X value only
-                    playerLifeIcons[i].Position = new Vector2((playerLifeIcons[i - 1].Position.X + 25), 55);
+                    playerLifeIcons[i].position = new Vector2((playerLifeIcons[i - 1].position.X + 25), 55);
                 }
             }
+        }
+
+        public void SpawnPlayer()
+        {
+
         }
     }
 }

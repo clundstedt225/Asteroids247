@@ -14,7 +14,7 @@ namespace AsteroidTools
     class Asteroid : BaseGameObject
     {
         // Large = 20 pts, Medium = 50 pts, Small = 100 pts...
-        public int pointValue;
+        public int pointValue = 20;
         public Size asteroidSize = Size.Large;
         
         //Asteroid sizes
@@ -34,10 +34,37 @@ namespace AsteroidTools
         {
             //base.OnDestroy();
             isActive = false;
-            //On Destroyed
+
             // - Award Point value
-            // - Explode
+            GameMode.playerScore += pointValue;
+
+            // - Play explosion sound
+
             // - Spawn 2 smaller level asteroids (if not already small)         
+        }
+    }
+
+    class PlayerShip : BaseGameObject
+    {
+        public int playerLives = 4;
+
+        public PlayerShip(string spriteName) : base(spriteName)
+        {
+            
+        }
+
+        public override void OnDestroy()
+        {
+            //base.OnDestroy();
+
+            //Play death sound 
+
+            //Respawn if lives are available
+            if (playerLives > 0)
+            {
+                playerLives--;
+                GameMode.playerLifeIcons.RemoveAt(playerLives);
+            }
         }
     }
 }

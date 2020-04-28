@@ -37,7 +37,7 @@ namespace DrawingExample
 
         //Whether or not to use a self clean up timer
         public bool useTimer = false;
-        float delay = 2f;
+        float delay = 1f;
 
         //Screen Wrapping Buffer
         int sBuffer = 25;
@@ -92,9 +92,19 @@ namespace DrawingExample
             //Update sprite based on object data
             if (objectSprite != null)
             {
+                //Sprites position needs to be set at the sprite object level
                 objectSprite.position = Position;
                 objectSprite.rotation = Rotation;
                 objectSprite.scale = Scale;
+            }
+
+            if (objectCircle != null)
+            {
+                objectCircle.color = circleColor;
+                //circle is just drawn directly at GO's position
+                //radius uses local object radius variable for drawing
+                objectCircle.Sides = circleSides;
+                objectCircle.Width = circleWidth;
             }
 
             if (useTimer)
@@ -117,21 +127,21 @@ namespace DrawingExample
 
             //Wrapped play field logic
             //Handle the X axis checks
-            if (Position.X > (800 + sBuffer))
+            if (Position.X > (GameMode.screenWidth + sBuffer))
             {
                 Position.X = 0 + -sBuffer;
             } else if (Position.X < (0 - sBuffer))
             {
-                Position.X = 800 + sBuffer;
+                Position.X = GameMode.screenWidth + sBuffer;
             }
 
             //Handle the Y axis checks
-            if (Position.Y > (600 + sBuffer))
+            if (Position.Y > (GameMode.screenHeight + sBuffer))
             {
                 Position.Y = 0 + -sBuffer;
             } else if (Position.Y < (0 - sBuffer))
             {
-                Position.Y = 600 + sBuffer;
+                Position.Y = GameMode.screenHeight + sBuffer;
             }
         
         }
@@ -181,23 +191,21 @@ namespace DrawingExample
                 {
                     //Has collided with current go in list...
 
-                    //Destroy both objects
-                    if (this.destroyOnCollide && go.destroyOnCollide)
+                    //Destroy both objects (torpedo -> asteroid collision)
+                    if ((this is AsteroidTools.Asteroid) && go.destroyOnCollide)
                     {
                         //Destroy other object first
                         go.Destroy();
                         this.Destroy();
 
-                    } else if (go.destroyOnCollide && !this.destroyOnCollide) 
+                    } else if ((this is AsteroidTools.Asteroid) && (go is AsteroidTools.PlayerShip)) 
                     {
-                        //Destroy only other object
+                        //(Asteroid -> Player)
+                        //Destroy only other object 
                         go.Destroy();
                     }
                 }
             }
-
-            //PlayerShip -> destroy on collision with asteroid
-            //Torpedo -> destroy asteroid AND self
         }
     }
 
