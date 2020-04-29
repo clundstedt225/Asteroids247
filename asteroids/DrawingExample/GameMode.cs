@@ -181,18 +181,45 @@ namespace DrawingExample
                 if (i % 2 == 0)
                 {
                     //from middle of (screen + 100), to edge
-                    randHeight = rand.Next((screenHeight / 2) + 75, screenHeight);
-                    randWidth = rand.Next((screenWidth / 2) + 100, screenWidth);
+                    randHeight = rand.Next((screenHeight / 2) + 50, screenHeight);
+                    randWidth = rand.Next((screenWidth / 2) + 50, screenWidth);
                 } else
                 {
-                    randHeight = rand.Next(0, (screenHeight / 2) - 75);
-                    randWidth = rand.Next(0, (screenWidth / 2) - 75);
+                    randHeight = rand.Next(0, (screenHeight / 2) - 50);
+                    randWidth = rand.Next(0, (screenWidth / 2) - 50);
                 }
 
                 asteroid.Position = new Vector2(randWidth, randHeight);
 
                 //Apply constant velocity in randomized direction
                 asteroid.Velocity = direction * 12;               
+            }
+        }
+
+        //Overloaded variant
+        public static void SpawnAsteroid(int count, Vector2 pos, float radius, int points)
+        {
+            Random rand = new Random();
+
+            //How many asteroids?
+            for (int i = 0; i < count; i++)
+            {
+                //Generate new random direction
+                float rotAngle = MathHelper.ToRadians(rand.Next(360));
+                Vector2 direction = new Vector2((float)Math.Cos(rotAngle), (float)Math.Sin(rotAngle));
+                direction.Normalize();
+
+                //Spawn asteroid with randomized values
+                Asteroid asteroid = new Asteroid();
+                asteroid.objectCircle = new Circle();
+                asteroid.circleSides = 24;
+                asteroid.circleRadius = radius;
+                asteroid.pointValue = points;
+
+                asteroid.Position = pos;
+
+                //Apply constant velocity in randomized direction
+                asteroid.Velocity = direction * 12;
             }
         }
     }

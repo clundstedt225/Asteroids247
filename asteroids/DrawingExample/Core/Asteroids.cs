@@ -29,7 +29,6 @@ namespace AsteroidTools
         {
             //Set collision checks to TRUE
             collisionChecks = true;
-
         }
 
         public override void OnDestroy()
@@ -42,7 +41,17 @@ namespace AsteroidTools
             //Play explosion sound
             GameMode.explosionAsteroidSound.Play();
 
-            // - Spawn 2 smaller level asteroids (if not already small)         
+            // - Spawn 2 smaller level asteroids (if not already small)        
+            if(this.asteroidSize == Size.Large)
+            {
+                //Spawn 2 medium asteroids
+                GameMode.SpawnAsteroid(2, this.Position, 35f, 50);
+
+            } else if (this.asteroidSize == Size.Medium)
+            {
+                //Spawn 2 small asteroids
+                GameMode.SpawnAsteroid(2, this.Position, 15f, 100);
+            }
         }
     }
 
