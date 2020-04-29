@@ -86,7 +86,7 @@ namespace AsteroidTools
 
                 torpedo.Velocity = direction * 950;
 
-                GameMode.shootSound.Play();
+                //GameMode.shootSound.Play();
             }
 
             if (GameApp.instance.IsKeyHeld(Keys.A))
@@ -140,7 +140,7 @@ namespace AsteroidTools
             isActive = false;
 
             //Play death sound 
-            GameMode.explosionShipSound.Play();
+            //GameMode.explosionShipSound.Play();
 
             //Respawn if lives are available
             if (GameMode.playerLives > 0)
