@@ -39,7 +39,7 @@ namespace AsteroidTools
             GameMode.playerScore += pointValue;
 
             //Play explosion sound
-            GameMode.explosionAsteroidSound.Play();
+            //GameMode.explosionAsteroidSound.Play();
 
             // - Spawn 2 smaller level asteroids (if not already small)        
             if(this.asteroidSize == Size.Large)
