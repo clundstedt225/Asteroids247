@@ -177,7 +177,8 @@ namespace DrawingExample
                 int randHeight;
                 int randWidth;
 
-                if (rand.Next(0, 2) != 0)
+                //Alternate upper and lower areas
+                if (i % 2 == 0)
                 {
                     //from middle of (screen + 100), to edge
                     randHeight = rand.Next((screenHeight / 2) + 75, screenHeight);
