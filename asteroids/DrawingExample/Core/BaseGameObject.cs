@@ -181,11 +181,14 @@ namespace DrawingExample
             isActive = false;
         }
 
+        //Only done on asteroids
         public void CollisionCheck()
         {
             //Go through each object in scene for circle collision check
-            foreach (BaseGameObject go in GameApp.instance.SceneList)
+            for (int i = 0; i < GameApp.instance.SceneList.Count; i++)
             {
+                BaseGameObject go = GameApp.instance.SceneList[i];
+
                 //Compare if distance to other given object is less then the combined radius of objects
                 if (Vector2.Distance(this.Position, go.Position) <= (this.circleRadius + go.circleRadius))
                 {

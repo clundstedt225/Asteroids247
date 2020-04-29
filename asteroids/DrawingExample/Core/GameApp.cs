@@ -119,19 +119,19 @@ namespace DrawingExample
             // Update All Objects
             if (SceneList.Count > 0)
             {
-                foreach (BaseGameObject go in SceneList)
-                {
-                    //Call each objects inner update method
-                    go.ObjectUpdate(gameTime);
-                }
+                //foreach (BaseGameObject go in SceneList)
+                //{
+                //    //Call each objects inner update method
+                //    go.ObjectUpdate(gameTime);
+                //}
 
-                /*
+                
                 for(int i = 0; i < SceneList.Count; i++)
                 {
                     //Call each objects inner update method
                     SceneList[i].ObjectUpdate(gameTime);
                 }
-                */
+                
             }
 
             // Clean up objects that are for Destruction

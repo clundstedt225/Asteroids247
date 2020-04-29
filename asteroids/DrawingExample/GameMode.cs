@@ -20,11 +20,10 @@ namespace DrawingExample
         //Font for score info
         SpriteFont gameFont;
         public static SoundEffect shootSound, explosionAsteroidSound, explosionShipSound;
-        public static PlayerShip playerShip;
-        Asteroid testRoid;
 
         //Player info
         public static int playerScore = 0;
+        public static int playerLives = 4;
         public static List<Sprite> playerLifeIcons;
 
         /// <summary>
@@ -61,18 +60,9 @@ namespace DrawingExample
             explosionShipSound = Content.Load<SoundEffect>("shipDeath");
             explosionAsteroidSound = Content.Load<SoundEffect>("asteroidDestroyed");
 
-            //Player object initial set up
-                        playerShip = new PlayerShip("WhiteTriShip");
-            playerShip.objectSprite.origin.X = playerShip.objectSprite.texture.Width / 2;
-            playerShip.objectSprite.origin.Y = playerShip.objectSprite.texture.Height / 2;
-            playerShip.Scale = 0.06f;
-            playerShip.Position = new Vector2((screenWidth / 2), (screenHeight / 2));
+            SpawnPlayer();
 
-            testRoid = new Asteroid();
-            testRoid.objectCircle = new Circle();
-            testRoid.Position = Vector2.Zero;
-            testRoid.circleRadius = 50f;
-            testRoid.circleSides = 24;
+            SpawnAsteroid(4);
 
             //Populate upper left with player lives
             SetUpPlayerLives();
@@ -95,74 +85,10 @@ namespace DrawingExample
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void GameUpdate(GameTime gameTime)
         {
-            //Get forward direction of ship
-            float rotAngle = MathHelper.ToRadians(-90);
-            Vector2 direction = new Vector2((float)Math.Cos(playerShip.Rotation + rotAngle), (float)Math.Sin(playerShip.Rotation + rotAngle));
-            direction.Normalize();
 
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
                 Exit();
-            }
-
-            //Shoot torpedo
-            if (IsKeyPressed(Keys.Space))
-            {
-                //Create circle game object
-                BaseGameObject torpedo = new BaseGameObject();
-                torpedo.objectCircle = new Circle();
-                torpedo.circleRadius = 3.5f;
-                torpedo.destroyOnCollide = true;
-                torpedo.useTimer = true;
-                torpedo.Position = playerShip.Position;
-                
-                torpedo.Velocity = direction * 950;
-
-                shootSound.Play();
-            }
-
-            if (IsKeyHeld(Keys.A))
-            {
-                playerShip.Rotation -= 5 * (MathHelper.Pi / 180); 
-            }
-
-            if (IsKeyHeld(Keys.D))
-            {
-                playerShip.Rotation += 5 * (MathHelper.Pi / 180); 
-            }
-
-            //Activate ships thruster
-            if (IsKeyHeld(Keys.W))
-            {
-                //Increase velocity in forward direction of ship
-                playerShip.Velocity += direction * 5;
-            }
-            else
-            {
-               //Key not pressed, no thrusters so decrease velocity to 0
-               if (playerShip.Velocity.X != 0)
-               {
-                   if (playerShip.Velocity.X > 0)
-                   {
-                       playerShip.Velocity.X -= 1.5f;
-                   }
-                   else
-                   {
-                       playerShip.Velocity.X += 1.5f;
-                   }
-               }
-
-               if (playerShip.Velocity.Y != 0)
-               {
-                   if (playerShip.Velocity.Y > 0)
-                   {
-                       playerShip.Velocity.Y -= 1.5f;
-                   }
-                   else
-                   {
-                       playerShip.Velocity.Y += 1.5f;
-                   }
-               }              
             }
         }
 
@@ -203,11 +129,11 @@ namespace DrawingExample
             playerLifeIcons = new List<Sprite>();
 
             //Set up row of extra life icons in upper left of screen
-            for (int i = 0; i < playerShip.playerLives; i++)
+            for (int i = 0; i < playerLives; i++)
             {
                 playerLifeIcons.Add(new Sprite("WhiteTriShip"));
-                playerLifeIcons[i].origin.X = playerShip.objectSprite.texture.Width / 2;
-                playerLifeIcons[i].origin.Y = playerShip.objectSprite.texture.Height / 2;
+                playerLifeIcons[i].origin.X = playerLifeIcons[i].texture.Width / 2;
+                playerLifeIcons[i].origin.Y = playerLifeIcons[i].texture.Height / 2;
                 playerLifeIcons[i].scale = 0.05f;
 
                 if (i == 0) {
@@ -222,7 +148,51 @@ namespace DrawingExample
 
         public static void SpawnPlayer()
         {
-            
+            //Player object initial set up
+            PlayerShip playerShip = new PlayerShip("WhiteTriShip");
+            playerShip.objectSprite.origin.X = playerShip.objectSprite.texture.Width / 2;
+            playerShip.objectSprite.origin.Y = playerShip.objectSprite.texture.Height / 2;
+            playerShip.Scale = 0.06f;
+            playerShip.Position = new Vector2((screenWidth / 2), (screenHeight / 2));
+        }
+
+        public static void SpawnAsteroid(int count)
+        {
+            Random rand = new Random();
+
+            //How many asteroids?
+            for (int i = 0; i < count; i++)
+            {
+                //Generate new random direction
+                float rotAngle = MathHelper.ToRadians(rand.Next(360));
+                Vector2 direction = new Vector2((float)Math.Cos(rotAngle), (float)Math.Sin(rotAngle));
+                direction.Normalize();
+               
+                //Spawn asteroid with randomized values
+                Asteroid asteroid = new Asteroid();
+                asteroid.objectCircle = new Circle();
+                asteroid.circleSides = 24;
+                asteroid.circleRadius = 50f;
+
+                int randHeight;
+                int randWidth;
+
+                if (rand.Next(0, 2) != 0)
+                {
+                    //from middle of (screen + 100), to edge
+                    randHeight = rand.Next((screenHeight / 2) + 75, screenHeight);
+                    randWidth = rand.Next((screenWidth / 2) + 100, screenWidth);
+                } else
+                {
+                    randHeight = rand.Next(0, (screenHeight / 2) - 75);
+                    randWidth = rand.Next(0, (screenWidth / 2) - 75);
+                }
+
+                asteroid.Position = new Vector2(randWidth, randHeight);
+
+                //Apply constant velocity in randomized direction
+                asteroid.Velocity = direction * 12;               
+            }
         }
     }
 }
