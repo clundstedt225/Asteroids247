@@ -219,7 +219,7 @@ namespace DrawingExample
 
                 asteroid.Position = pos;
 
-                //Apply constant velocity in randomized direction
+                //Apply velocity in randomized direction
                 if (aSize == Asteroid.Size.Medium)
                 {
                     asteroid.Velocity = direction * 20;
