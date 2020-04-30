@@ -197,7 +197,7 @@ namespace DrawingExample
         }
 
         //Overloaded variant
-        public static void SpawnAsteroid(int count, Vector2 pos, float radius, int points)
+        public static void SpawnAsteroid(int count, Vector2 pos, float radius, int points, AsteroidTools.Asteroid.Size aSize)
         {
             Random rand = new Random();
 
@@ -215,11 +215,22 @@ namespace DrawingExample
                 asteroid.circleSides = 24;
                 asteroid.circleRadius = radius;
                 asteroid.pointValue = points;
+                asteroid.asteroidSize = aSize;
 
                 asteroid.Position = pos;
 
                 //Apply constant velocity in randomized direction
-                asteroid.Velocity = direction * 12;
+                if (aSize == Asteroid.Size.Medium)
+                {
+                    asteroid.Velocity = direction * 20;
+                } else if (aSize == Asteroid.Size.Small)
+                {
+                    asteroid.Velocity = direction * 26;
+                } else
+                {
+                    asteroid.Velocity = direction * 12;
+                }
+                
             }
         }
     }

@@ -33,24 +33,25 @@ namespace AsteroidTools
 
         public override void OnDestroy()
         {
+            
             isActive = false;
 
             //Award Point value
             GameMode.playerScore += pointValue;
 
             //Play explosion sound
-            //GameMode.explosionAsteroidSound.Play();
+            GameMode.explosionAsteroidSound.Play();
 
             // - Spawn 2 smaller level asteroids (if not already small)        
             if(this.asteroidSize == Size.Large)
             {
                 //Spawn 2 medium asteroids
-                GameMode.SpawnAsteroid(2, this.Position, 35f, 50);
+                GameMode.SpawnAsteroid(2, this.Position, 35f, 50, Size.Medium);
 
             } else if (this.asteroidSize == Size.Medium)
             {
                 //Spawn 2 small asteroids
-                GameMode.SpawnAsteroid(2, this.Position, 15f, 100);
+                GameMode.SpawnAsteroid(2, this.Position, 15f, 100, Size.Small);
             }
         }
     }
@@ -86,7 +87,7 @@ namespace AsteroidTools
 
                 torpedo.Velocity = direction * 950;
 
-                //GameMode.shootSound.Play();
+                GameMode.shootSound.Play();
             }
 
             if (GameApp.instance.IsKeyHeld(Keys.A))
@@ -140,7 +141,7 @@ namespace AsteroidTools
             isActive = false;
 
             //Play death sound 
-            //GameMode.explosionShipSound.Play();
+            GameMode.explosionShipSound.Play();
 
             //Respawn if lives are available
             if (GameMode.playerLives > 0)

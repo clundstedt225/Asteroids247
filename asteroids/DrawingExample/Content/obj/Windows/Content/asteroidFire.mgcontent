@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/asteroidFire.wav</SourceFile>
-  <SourceTime>2020-04-27T18:13:36.2966659-04:00</SourceTime>
-  <DestFile>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/bin/Windows/Content/asteroidFire.xnb</DestFile>
-  <DestTime>2020-04-28T02:02:11.3687021-04:00</DestTime>
+  <SourceFile>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/asteroidFire.wav</SourceFile>
+  <SourceTime>2020-04-29T21:09:38.583072-04:00</SourceTime>
+  <DestFile>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/bin/Windows/Content/asteroidFire.xnb</DestFile>
+  <DestTime>2020-04-29T21:15:22.7378145-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

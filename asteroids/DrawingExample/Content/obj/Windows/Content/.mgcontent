@@ -4,16 +4,16 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/asteroidDestroyed.wav</File>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/asteroidFire.wav</File>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/Enterprise.png</File>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/MFalcon.png</File>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/MyFont.spritefont</File>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/shipDeath.wav</File>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/Tie.png</File>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/TieAdvanced.png</File>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/TriShip.png</File>
-    <File>E:/REPOS/247FinalProj/Asteroids247/asteroids/DrawingExample/Content/WhiteTriShip.png</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/asteroidDestroyed.wav</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/asteroidFire.wav</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/Enterprise.png</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/MFalcon.png</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/MyFont.spritefont</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/shipDeath.wav</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/Tie.png</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/TieAdvanced.png</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/TriShip.png</File>
+    <File>C:/Users/Connor/Desktop/Repos/asteroids/Asteroids247/asteroids/DrawingExample/Content/WhiteTriShip.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
