@@ -7,7 +7,7 @@ NHTI AGGP247 final project - Connor Lundstedt
 
 
 ## Project Navigation
-Most code written for project can be found in the (Asteroids247 -> asteroids -> DrawingExample -> Core) folder.
+- Most code written for project can be found in the (Asteroids247 -> asteroids -> DrawingExample -> Core) folder.
 
 
 ## Things I would change if I had more time
