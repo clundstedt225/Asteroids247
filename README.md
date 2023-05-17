@@ -5,14 +5,13 @@ For our final project, we were allowed to choose a simple game to recreate. This
 what we had learned in the course on our own. For my project I chose to recreate the classic Atari 
 game Asteroids.
 
+## Project Navigation
+- Most of the code written [can be found here](https://github.com/clundstedt225/Asteroids247/tree/master/asteroids/DrawingExample/Core).
+
 ## Project Tools & Languages
 - MonoGame Framework: https://www.monogame.net/
 - Microsoft Visual Studio IDE
 - Programmed in C#
-
-## Project Navigation
-- Most of the code written [can be found here](https://github.com/clundstedt225/Asteroids247/tree/master/asteroids/DrawingExample/Core).
-
 
 ## Things I would change if I had more time
 - Add sprites for asteroids
