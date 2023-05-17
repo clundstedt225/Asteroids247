@@ -1,5 +1,5 @@
-# Asteroids247
-NHTI AGGP247 final project - Connor Lundstedt
+# MonoGame Asteroids
+This was a final personal capstone project for AGGP 247 (Math & Physics for Game Programmers)
 
 
 ## Project Tools & Languages
