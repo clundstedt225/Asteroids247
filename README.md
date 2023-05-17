@@ -11,7 +11,7 @@ game Asteroids.
 - Programmed in C#
 
 ## Project Navigation
-- Most code written for project can be found in the (Asteroids247 -> asteroids -> DrawingExample -> Core) folder.
+- All personally written code can be found [Here](https://github.com/clundstedt225/Asteroids247/tree/master/asteroids/DrawingExample/Core).
 
 
 ## Things I would change if I had more time
