@@ -8,6 +8,7 @@ game Asteroids.
 ## Project Navigation
 - All source code [can be found here](https://github.com/clundstedt225/Asteroids247/tree/master/asteroids/DrawingExample/Core).
 - The [BaseGameObject](https://github.com/clundstedt225/Asteroids247/blob/master/asteroids/DrawingExample/Core/BaseGameObject.cs) class was created for all game objects to inherit from.
+- The [AsteroidTools](https://github.com/clundstedt225/Asteroids247/blob/master/asteroids/DrawingExample/Core/Asteroids.cs) namespace is where gameobject classes are defined.
 
 ## Project Tools & Languages
 - MonoGame Framework: https://www.monogame.net/
