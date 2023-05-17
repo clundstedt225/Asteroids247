@@ -13,5 +13,6 @@ NHTI AGGP247 final project - Connor Lundstedt
 
 ## Things I would change if I had more time
 - Add sprites for asteroids
+- Add colors to sprites
 
 
