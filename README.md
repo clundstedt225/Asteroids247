@@ -20,7 +20,8 @@ All source code [can be found here](https://github.com/clundstedt225/Asteroids24
 ## 	:hammer_and_wrench: Tools & Languages Used
 - MonoGame Framework: https://www.monogame.net/
 - Microsoft Visual Studio IDE
-- Programmed in C#
+- Github for Source Control
+- Programmed using C#
 
 ##	:stopwatch: Things I would change if I had more time
 - Add sprites for asteroids
