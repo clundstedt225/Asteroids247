@@ -3,7 +3,7 @@ NHTI AGGP247 final project - Connor Lundstedt
 
 
 ## Project Workflow & Tools
-- Project was developed with the monogame framework
+- MonoGame Framework: https://www.monogame.net/
 
 
 ## Project Navigation
