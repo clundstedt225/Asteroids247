@@ -1,6 +1,8 @@
 # MonoGame Asteroids
 This was a final personal capstone project for AGGP 247 (Math & Physics for Game Programmers)
 
+For our final project, we were allowed to choose a simple game to recreate. This allowed us to apply
+what we had learned in the course, and I chose to recreate the classic Atari game Asteroids.
 
 ## Project Tools & Languages
 - MonoGame Framework: https://www.monogame.net/
