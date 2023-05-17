@@ -6,7 +6,7 @@ what we had learned in the course on our own. For my project I chose to recreate
 game Asteroids.
 
 ## Project Navigation
-- Most of the code written [can be found here](https://github.com/clundstedt225/Asteroids247/tree/master/asteroids/DrawingExample/Core).
+- All source code [can be found here](https://github.com/clundstedt225/Asteroids247/tree/master/asteroids/DrawingExample/Core).
 - The [BaseGameObject](https://github.com/clundstedt225/Asteroids247/blob/master/asteroids/DrawingExample/Core/BaseGameObject.cs) class was created for all game objects to inherit from.
 
 ## Project Tools & Languages
