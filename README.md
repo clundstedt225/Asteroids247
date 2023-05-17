@@ -1,5 +1,5 @@
 # MonoGame Asteroids
-This was a final personal capstone project for AGGP 247 (Math & Physics for Game Programmers)
+This was a final personal capstone project for AGGP 247 - Math & Physics for Game Programmers at NHTI
 
 For our final project, we were allowed to choose a simple game to recreate. This allowed us to apply
 what we had learned in the course on our own. For my project I chose to recreate the classic Atari 
