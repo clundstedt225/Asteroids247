@@ -1,5 +1,5 @@
 # Asteroids247
-## NHTI AGGP247 final project - Connor Lundstedt
+NHTI AGGP247 final project - Connor Lundstedt
 
 ## Project Workflow & Tools
 - Project was developed with the monogame framework
