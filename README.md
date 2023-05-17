@@ -6,12 +6,13 @@ what we had learned in the course on our own. For my project I chose to recreate
 game Asteroids.
 
 ## 	:world_map: Project Navigation
-- All source code [can be found here](https://github.com/clundstedt225/Asteroids247/tree/master/asteroids/DrawingExample/Core).
 
-### BaseGameObject.cs
+All source code [can be found here](https://github.com/clundstedt225/Asteroids247/tree/master/asteroids/DrawingExample/Core).
+
+### _BaseGameObject.cs_
 - The [BaseGameObject](https://github.com/clundstedt225/Asteroids247/blob/master/asteroids/DrawingExample/Core/BaseGameObject.cs) class was created for all GameObject classes to inherit from and extend.
 
-### Asteroids.cs 
+### _Asteroids.cs_ 
 (Encapsulation was used here to keep collision detection and GameObject destruction contained)
 - The [AsteroidTools](https://github.com/clundstedt225/Asteroids247/blob/master/asteroids/DrawingExample/Core/Asteroids.cs) namespace is where GameObject classes such as the player are defined.
 
